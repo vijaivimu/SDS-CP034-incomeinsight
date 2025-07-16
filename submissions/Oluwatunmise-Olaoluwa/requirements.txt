@@ -1,0 +1,42 @@
+# Core Data Libraries
+pandas
+numpy
+
+# Visualization
+matplotlib
+seaborn
+
+# Scikit-learn and ML Utilities
+scikit-learn
+mlflow
+
+# Deep Learning
+torch
+torchmetrics
+torcheval
+
+# Explainability Tools
+shap
+lime
+captum
+
+# Baseline Models (for comparison)
+catboost
+lightgbm
+
+# Model Deployment
+fastapi
+uvicorn
+python-multipart
+requests
+
+# Serialization
+joblib
+
+# Optional Development Tools
+notebook
+jupyterlab
+black
+isort
+
+kagglehub
