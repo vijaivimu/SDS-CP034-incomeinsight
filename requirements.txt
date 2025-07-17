@@ -1,1 +1,12 @@
 # Contains all libraries that are needed for this project
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+mlflow
+streamlit
+jupyter
+ipykernel
+kaggle
