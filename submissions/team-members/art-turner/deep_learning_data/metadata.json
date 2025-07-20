@@ -1,0 +1,42 @@
+{
+  "numerical_features": [
+    "age",
+    "fnlwgt",
+    "education.num",
+    "capital.gain",
+    "capital.loss",
+    "hours.per.week"
+  ],
+  "categorical_features": [
+    "workclass",
+    "education",
+    "marital.status",
+    "occupation",
+    "relationship",
+    "race",
+    "sex",
+    "native.country"
+  ],
+  "categorical_cardinalities": {
+    "workclass": 8,
+    "education": 16,
+    "marital.status": 7,
+    "occupation": 14,
+    "relationship": 6,
+    "race": 5,
+    "sex": 2,
+    "native.country": 41
+  },
+  "class_weights": {
+    "0": 0.6586093552465234,
+    "1": 2.076199585525267
+  },
+  "dataset_shape": [
+    32561,
+    15
+  ],
+  "class_distribution": {
+    "<=50K": 24720,
+    ">50K": 7841
+  }
+}
