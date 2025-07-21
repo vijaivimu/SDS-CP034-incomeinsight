@@ -5,7 +5,7 @@ Use this file to answer the key reflection questions for each phase of the proje
 
 ---
 
-## ✅ Phase 1: Setup & Exploratory Data Analysis (EDA)
+## ✅ Week 1: Setup & Exploratory Data Analysis (EDA)
 
 > Answer the EDA questions provided in the project materials here. Focus on data quality, trends, anomalies, and relationships.
 
@@ -19,15 +19,9 @@ Use this file to answer the key reflection questions for each phase of the proje
 
 ---
 
-## ✅ Phase 2: Model Development
+## ✅ Week 2: Feature Engineering & Data Preprocessing
 
-> This phase spans 3 weeks. Answer each set of questions weekly as you build, train, evaluate, and improve your models.
-
----
-
-### 🔍 Week 1: Laying the Foundation
-
-#### 🔑 Question 1:
+### 🔑 Question 1:
 **Which features in the dataset appear to have the strongest relationship with the income label (>50K), and how did you determine this?**  
 🎯 *Purpose: Tests ability to identify influential predictors through EDA.*
 
@@ -40,7 +34,7 @@ Check chi-squared test or information gain if desired.
 
 ---
 
-#### 🔑 Question 2:
+### 🔑 Question 2:
 **Did you engineer any new features from existing ones? If so, explain the new feature(s) and why you think they might help your classifier.**  
 🎯 *Purpose: Tests creativity and business-driven reasoning in feature creation.*
 
@@ -51,7 +45,7 @@ Consider grouping `education_num` into bins, creating a `has_capital_gain` flag,
 
 ---
 
-#### 🔑 Question 3:
+### 🔑 Question 3:
 **Which continuous features required scaling or transformation before modeling, and which method did you use?**  
 🎯 *Purpose: Connects feature scaling to model compatibility.*
 
@@ -64,7 +58,7 @@ Apply `StandardScaler` or `MinMaxScaler` accordingly.
 
 ---
 
-#### 🔑 Question 4:
+### 🔑 Question 4:
 **Is the target variable (`income`) imbalanced? How did you check, and what will you do (if anything) to handle it?**  
 🎯 *Purpose: Tests understanding of classification imbalances and impact on metrics.*
 
@@ -77,7 +71,7 @@ Mention implications for precision, recall, and F1.
 
 ---
 
-#### 🔑 Question 5:
+### 🔑 Question 5:
 **What does your final cleaned dataset look like before modeling? Include shape, types of features (numerical/categorical), and a summary of the preprocessing steps applied.**  
 🎯 *Purpose: Encourages documentation and preparation for modeling.*
 
@@ -91,7 +85,73 @@ Use `df.shape`, `df.dtypes`, and summarize what was dropped, encoded, scaled, or
 
 ---
 
-### 📆 Week 2: Model Development & Experimentation
+### ✅ Week 3: Model Development & Experimentation
+
+### 🔑 Question 1:
+**Which classification models did you train for predicting income, and what are the strengths or assumptions of each model?**  
+🎯 *Purpose: Tests understanding of algorithm selection and fit for the problem.*
+
+💡 **Hint:**  
+Train Logistic Regression (baseline, interpretable), Random Forest (handles non-linearities), and XGBoost (boosted performance).  
+Explain what each model assumes (e.g., linearity in Logistic Regression) or does well (e.g., handling missing values, feature interactions).
+
+✏️ *Your answer here...*
+
+---
+
+### 🔑 Question 2:
+**How did each model perform based on your evaluation metrics (accuracy, precision, recall, F1-score, ROC-AUC)? Which performed best, and why?**  
+🎯 *Purpose: Tests ability to evaluate and compare classifiers fairly.*
+
+💡 **Hint:**  
+Use `classification_report`, `confusion_matrix`, and `roc_auc_score`.  
+Show results in a table or chart.  
+Explain model strengths (e.g., better recall = catches more high-income earners).
+
+✏️ *Your answer here...*
+
+---
+
+### 🔑 Question 3:
+**Is your model biased toward one class (>$50K or ≤$50K)? How did you detect this, and what might you do to fix it?**  
+🎯 *Purpose: Tests understanding of class imbalance and metric interpretation.*
+
+💡 **Hint:**  
+Inspect confusion matrix, precision/recall per class.  
+Use `.value_counts()` on the `income` label to see imbalance.  
+Consider using `class_weight='balanced'` or resampling techniques.
+
+✏️ *Your answer here...*
+
+---
+
+### 🔑 Question 4:
+**What features were most important in your best-performing model, and do they align with expectations about income prediction?**  
+🎯 *Purpose: Tests interpretability and domain reasoning.*
+
+💡 **Hint:**  
+Use `.feature_importances_` for tree models or `.coef_` for Logistic Regression.  
+Do features like `education`, `occupation`, or `hours_per_week` appear at the top?  
+Visualize using bar plots.
+
+✏️ *Your answer here...*
+
+---
+
+### 🔑 Question 5:
+**How did you use MLflow to track your model experiments, and what comparisons did it help you make?**  
+🎯 *Purpose: Tests reproducibility and experiment tracking skills.*
+
+💡 **Hint:**  
+Log model name, hyperparameters, evaluation metrics, and notes.  
+Use MLflow’s comparison view to track which run performed best.  
+Share screenshots or describe insights gained.
+
+✏️ *Your answer here...*
+
+---
+
+## ✅ Week 4: Model Selection & Hyperparameter Tuning
 
 ### 🔑 Question 1:
 
@@ -105,21 +165,7 @@ Use `df.shape`, `df.dtypes`, and summarize what was dropped, encoded, scaled, or
 
 ---
 
-### 📆 Week 3: Model Tuning
-
-### 🔑 Question 1:
-
-### 🔑 Question 2:
-
-### 🔑 Question 3:
-
-### 🔑 Question 4:
-
-### 🔑 Question 5:
-
----
-
-## ✅ Phase 3: Model Deployment
+## ✅ Week 5: Model Deployment
 
 > Document your approach to building and deploying the Streamlit app, including design decisions, deployment steps, and challenges.
 
