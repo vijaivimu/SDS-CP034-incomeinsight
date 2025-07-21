@@ -1,0 +1,4 @@
+,accuracy,precision,recall,f1_score,roc_auc
+Neural Network,0.8532,0.7161,0.6467,0.6796,0.9074
+LightGBM,0.869,0.7735,0.6448,0.7033,0.9208
+CatBoost,0.8607,0.7707,0.6001,0.6748,0.9134
