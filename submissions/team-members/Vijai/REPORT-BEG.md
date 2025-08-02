@@ -114,14 +114,33 @@ I computed mutual information to evaluate how informative each feature is for pr
 
 ### 🔑 Question 1:
 **Which features in the dataset appear to have the strongest relationship with the income label (>50K), and how did you determine this?**  
-🎯 *Purpose: Tests ability to identify influential predictors through EDA.*
 
-💡 **Hint:**  
-Use `.groupby('income')` to compare mean values of numeric features.  
-Use bar plots or violin plots for categorical features vs. income.  
-Check chi-squared test or information gain if desired.
+To identify which features most influence income, we calculated **Mutual Information (MI) scores**, a measure that captures the amount of information each feature contributes to predicting the target variable (`income`). This method accommodates both **categorical** and **numerical** features after encoding.
 
-✏️ *Your answer here...*
+The results are shown below:
+
+| Feature           | MI Score   |
+|------------------|------------|
+| relationship      | **0.1133** |
+| marital.status    | **0.1111** |
+| capital.gain      | 0.0822     |
+| education.num     | 0.0666     |
+| age               | 0.0662     |
+| education         | 0.0642     |
+| occupation        | 0.0617     |
+| hours.per.week    | 0.0408     |
+| capital.loss      | 0.0351     |
+| sex               | 0.0314     |
+| fnlwgt            | 0.0311     |
+| workclass         | 0.0147     |
+| race              | 0.0081     |
+| native.country    | 0.0032     |
+
+**Key Insight:**
+- The highest mutual information scores are from `relationship` (0.1133), `marital.status` (0.1111), and `capital.gain` (0.0822), indicating that these features have the most **significant impact** on income prediction.
+- Features with low MI scores, such as `race` and `native.country`, contribute relatively little to income prediction.
+
+📊 *A corresponding bar chart of MI scores is saved as `week2_q1_mutual_info.png`.*
 
 ---
 
