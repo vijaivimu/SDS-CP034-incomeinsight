@@ -37,6 +37,30 @@ I computed mutual information to evaluate how informative each feature is for pr
 
 ### 🔑 Question 2: How does income vary with education, marital status, or hours worked per week?
 
+### 🎓 Education and Income
+
+![Income by Education](charts/question2_income_by_education.png)
+
+- Individuals with **Bachelor’s, Master’s, and Doctorate degrees** are more likely to earn >$50K.
+- The vast majority of individuals with **lower education levels (HS-grad and below)** earn ≤$50K.
+- Advanced education is correlated with higher earning potential, though such individuals are fewer in the dataset.
+
+### 💍 Marital Status and Income
+
+![Income by Marital Status](charts/question2_income_by_marital_status.png)
+
+- Individuals who are **"Married-civ-spouse"** have the **highest proportion** of >$50K earners.
+- **"Never-married"** individuals are predominantly in the ≤$50K category, suggesting lower income is common among single people.
+- Categories such as **"Divorced"**, **"Separated"**, and **"Widowed"** show very low high-income representation.
+
+### 🕒 Hours Worked per Week and Income
+
+![Hours Worked vs Income](charts/question2_income_by_hours_per_week.png)
+
+- Both income groups have a **median of 40 hours/week**, as shown in the labels above each box.
+- However, individuals earning >$50K display a **much wider range** of work hours.
+- Many high-income earners work **significantly more than 40 hours**, suggesting that while 40 is a common standard, putting in extra hours is often associated with higher income.
+
 ### 🔑 Question 3: Are there disparities across race, sex, or native country?
 
 ### 🔑 Question 4: Do capital gains/losses strongly impact the income label?
