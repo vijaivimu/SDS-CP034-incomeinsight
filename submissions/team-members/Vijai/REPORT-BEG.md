@@ -63,6 +63,33 @@ I computed mutual information to evaluate how informative each feature is for pr
 
 ### 🔑 Question 3: Are there disparities across race, sex, or native country?
 
+### 🌍 Race and Income
+
+![Income by Race](charts/question3_income_by_race.png)
+
+- The majority of the dataset consists of White individuals, who also make up most of the high-income earners.
+- Other racial groups — such as Black, Asian-Pac-Islander, Amer-Indian-Eskimo, and Other — are underrepresented in the >$50K income bracket.
+- There are clear disparities in income distribution across racial categories, with White individuals having the highest likelihood of earning >$50K.
+
+### 🧑‍🤝‍🧑 Sex and Income
+
+![Income by Sex](charts/question3_income_by_sex.png)
+
+- **Men** are significantly more likely to earn >$50K compared to women.
+- While both genders have a large presence in the dataset, the proportion of **high-income males** is much greater.
+- The **gender income disparity** is clearly visible in this distribution.
+
+
+### 🌐 Native Country and Income
+
+![Income by Native Country](charts/question3_income_by_country_top10.png)
+
+- The dataset is heavily skewed toward individuals from the **United States**, which dominates both income brackets.
+- Non-U.S. countries show **very few individuals earning >$50K**, even in the top 10 most common native countries.
+- This may indicate disparities in economic opportunities or representation among immigrants and foreign-born residents.
+- For modeling purposes, this imbalance should be considered to avoid bias toward U.S.-centric outcomes.
+
+
 ### 🔑 Question 4: Do capital gains/losses strongly impact the income label?
 
 ---
