@@ -92,7 +92,23 @@ I computed mutual information to evaluate how informative each feature is for pr
 
 ### 🔑 Question 4: Do capital gains/losses strongly impact the income label?
 
----
+### 💰 Capital Gains and Income
+
+![Capital Gain KDE (Log)](charts/question4_capital_gain_kde_log.png)
+
+- Most individuals have little or no capital gains (visible as a high spike near 0).
+- A **notable portion of high-income earners** have significant capital gains — evident from the **secondary peak** in the >$50K group between log(1 + gain) 8 to 10.
+- This indicates that **capital gains strongly correlate with higher income**, making it a valuable predictive feature.
+
+
+### 📉 Capital Loss and Income
+
+![Capital Loss KDE (Log)](charts/question4_capital_loss_kde_log.png)
+
+- The majority of both income groups report **no capital losses**, seen in the peak at log(1) = 0.
+- A **small subset of higher-income individuals** shows a secondary peak around log(1+loss) ≈ 8, indicating losses of ~$3,000.
+- While this suggests some relationship between **investment-related loss and high income**, the effect is **less pronounced than capital gains**.
+
 
 ## ✅ Week 2: Feature Engineering & Data Preprocessing
 
