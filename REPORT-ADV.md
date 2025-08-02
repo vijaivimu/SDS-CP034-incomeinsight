@@ -154,13 +154,66 @@ Share how this process helped you debug or improve your architecture.
 
 ### 🔑 Question 1:
 
+**Which neural network hyperparameters did you experiment with, and how did you narrow down the search space?**
+🎯 *Purpose: Tests familiarity with DL tuning components and experiment scope.*
+
+💡 **Hint:**
+Tune learning rate, hidden layers, neurons per layer, dropout, batch size, epochs.
+Use validation performance and early stopping to limit overfitting.
+
+✏️ *Your answer here...*
+
+---
+
 ### 🔑 Question 2:
+
+**What tuning strategy did you follow (e.g., manual tuning, learning rate scheduler, Optuna), and why did you choose it?**
+🎯 *Purpose: Tests awareness of tuning methodologies and their applicability.*
+
+💡 **Hint:**
+Manual = intuitive but slow.
+Grid/Random = more systematic.
+Optuna = automated and efficient for deep learning.
+
+✏️ *Your answer here...*
+
+---
 
 ### 🔑 Question 3:
 
+**How did tuning impact your validation metrics (e.g., F1, ROC-AUC), and which configuration performed best?**
+🎯 *Purpose: Tests metric-based model comparison and performance insight.*
+
+💡 **Hint:**
+Present before/after tuning metrics in a table or chart.
+Highlight improvements and justify which config you picked.
+
+✏️ *Your answer here...*
+
+---
+
 ### 🔑 Question 4:
 
+**How did you use MLflow to track tuning experiments, and what insights did you gain from visualizing the logs?**
+🎯 *Purpose: Tests use of tooling for iterative development and reproducibility.*
+
+💡 **Hint:**
+Log hyperparameters, metrics, training time, and run notes.
+Use MLflow comparison dashboard to pick best model.
+
+✏️ *Your answer here...*
+
+---
+
 ### 🔑 Question 5:
+
+**Which model architecture and hyperparameter combination did you finalize for deployment, and how confident are you in its robustness?**
+🎯 *Purpose: Tests model selection logic and confidence in generalization.*
+
+💡 **Hint:**
+Justify final selection based on validation stability, test performance, and interpretability.
+
+✏️ *Your answer here...*
 
 ---
 

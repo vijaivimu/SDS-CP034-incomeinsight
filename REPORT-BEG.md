@@ -154,14 +154,60 @@ Share screenshots or describe insights gained.
 ## ✅ Week 4: Model Selection & Hyperparameter Tuning
 
 ### 🔑 Question 1:
+**Which hyperparameters did you tune for your best-performing model, and how did you decide which ones to adjust?**
+
+💡 **Hint:**
+For Logistic Regression: C, solver.
+For Random Forest: n_estimators, max_depth, min_samples_split.
+For XGBoost: learning_rate, max_depth, n_estimators.
+
+✏️ Your answer here...
+
+---
 
 ### 🔑 Question 2:
+**What method did you use for hyperparameter tuning (e.g., GridSearchCV, RandomizedSearchCV), and why?**
+
+💡 **Hint:**
+GridSearch = exhaustive but slow.
+RandomizedSearch = faster, good for large search spaces.
+
+✏️  *Your answer here...*
+
+
+---
 
 ### 🔑 Question 3:
+**How did the tuned model’s performance compare to the baseline version, and what does that tell you about the value of tuning?**
+
+💡 **Hint:**
+Compare metrics (accuracy, F1, AUC) from Week 3 and Week 4 side-by-side.
+Small improvements may still matter in real-world deployment.
+
+✏️  *Your answer here...*
+
+---
 
 ### 🔑 Question 4:
+**What risk of overfitting did you observe during tuning, and how did you mitigate it?**
+
+💡 **Hint:**
+Use cross-validation and monitor gap between train/test metrics.
+Apply early stopping (XGBoost), pruning (trees), or reduce model complexity.
+
+✏️  *Your answer here...*
+
+---
 
 ### 🔑 Question 5:
+
+**Which model and hyperparameters did you ultimately select for deployment, and why?**
+
+💡 **Hint:**
+Explain the tradeoff between interpretability, performance, and generalization.
+Justify final parameter choices and their business relevance.
+
+✏️  *Your answer here...*
 
 ---
 
