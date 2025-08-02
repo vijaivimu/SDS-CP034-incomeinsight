@@ -212,17 +212,46 @@ To address this imbalance, I plan to:
 
 ### 🔑 Question 5:
 **What does your final cleaned dataset look like before modeling? Include shape, types of features (numerical/categorical), and a summary of the preprocessing steps applied.**  
-🎯 *Purpose: Encourages documentation and preparation for modeling.*
 
-💡 **Hint:**  
-Use `df.shape`, `df.dtypes`, and summarize what was dropped, encoded, scaled, or engineered.
+I examined and cleaned the dataset thoroughly before modeling. Below is a summary of the final state of the dataset:
 
-✏️ *Your answer here...*
+#### 📐 Dataset Shape:
+- **Rows:** 30,162  
+- **Columns:** 17
+
+#### 🧪 Feature Types:
+- **Numerical Features:**  
+  - `age`, `fnlwgt`, `education.num`, `capital.gain`, `capital.loss`, `hours.per.week`,  
+    `occupation_mean_hours`, `workclass_mean_hours`
+  
+- **Categorical Features:**  
+  - `workclass`, `education`, `marital.status`, `occupation`, `relationship`, `race`, `sex`, `native.country`
+
+- **Target Variable:**  
+  - `income` (binary: 0 = ≤50K, 1 = >50K)
 
 ---
 
+### 🧼 Preprocessing Steps Applied:
 
----
+1. **Handled Missing Values:**
+   - Removed rows with missing values in `workclass`, `occupation`, and `native.country` (≈ 1,800 rows)
+
+2. **Categorical Encoding:**
+   - Used `LabelEncoder` to convert categorical variables into numerical format for feature selection and correlation analysis
+
+3. **Feature Engineering:**
+   - Created new features:
+     - `occupation_mean_hours` — average weekly working hours grouped by occupation
+     - `workclass_mean_hours` — average weekly working hours grouped by workclass
+
+4. **Feature Scaling:**
+   - Applied `StandardScaler` to scale continuous features (zero mean, unit variance)
+
+5. **Class Imbalance Handling:**
+   - Identified class imbalance in `income` (≈ 75% ≤50K vs 25% >50K)  
+   - Planned to use **stratified train-test split**, and optionally **SMOTE** or **class weighting** in model training
+
 
 ### ✅ Week 3: Model Development & Experimentation
 
