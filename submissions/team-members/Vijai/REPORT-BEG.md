@@ -140,20 +140,28 @@ The results are shown below:
 - The highest mutual information scores are from `relationship` (0.1133), `marital.status` (0.1111), and `capital.gain` (0.0822), indicating that these features have the most **significant impact** on income prediction.
 - Features with low MI scores, such as `race` and `native.country`, contribute relatively little to income prediction.
 
-📊 *A corresponding bar chart of MI scores is saved as `week2_q1_mutual_info.png`.*
+📊 **Visual Summary:**  
+![Mutual Information Bar Chart](charts/week2_q1_mutual_info.png)
 
 ---
 
 ### 🔑 Question 2:
 **Did you engineer any new features from existing ones? If so, explain the new feature(s) and why you think they might help your classifier.**  
-🎯 *Purpose: Tests creativity and business-driven reasoning in feature creation.*
 
-💡 **Hint:**  
-Consider grouping `education_num` into bins, creating a `has_capital_gain` flag, or interaction terms like `hours_per_week * education_num`.
+#### 🔧 Engineered Features Analysis (Q2)
 
-✏️ *Your answer here...*
+To enhance model interpretability, we created the following features:
+- `occupation_mean_hours`: Avg. weekly hours per occupation
+- `workclass_mean_hours`: Avg. weekly hours per workclass
 
----
+We evaluated their usefulness via the correlation matrix below:
+
+📊 ![Heatmap Including Engineered Features](charts/week2_q2_heatmap_engineered_features.png)
+
+**Observations:**
+- `occupation_mean_hours` shows a meaningful positive correlation with income (~0.24), suggesting people in time-intensive occupations are more likely to earn >50K.
+- `workclass_mean_hours` also shows a modest correlation (~0.14), which may contribute some value but is relatively weaker than `occupation_mean_hours`.
+
 
 ### 🔑 Question 3:
 **Which continuous features required scaling or transformation before modeling, and which method did you use?**  
