@@ -192,16 +192,23 @@ I then applied `StandardScaler` on the transformed values to keep all continuous
 
 ### 🔑 Question 4:
 **Is the target variable (`income`) imbalanced? How did you check, and what will you do (if anything) to handle it?**  
-🎯 *Purpose: Tests understanding of classification imbalances and impact on metrics.*
 
-💡 **Hint:**  
-Use `.value_counts(normalize=True)`.  
-If imbalance exists, consider using class weights, SMOTE, or stratified splits.  
-Mention implications for precision, recall, and F1.
+**Is the target variable (`income`) imbalanced? How did you check, and what will you do (if anything) to handle it?**
 
-✏️ *Your answer here...*
+I checked the balance of the `income` target variable by calculating class proportions and plotting a bar chart:
 
----
+📊 **Income Class Distribution (%):**
+- Class `0` (≤50K): **75.1%**  
+- Class `1` (>50K): **24.9%**
+
+![Income Distribution](charts/week2_q4_income_distribution.png)
+
+This indicates a significant class imbalance, where most individuals fall into the ≤50K category.
+
+To address this imbalance, I plan to:
+- Use **stratified sampling** when splitting the dataset into training and testing sets  
+- Consider models that support **class weighting** (e.g., `class_weight='balanced'`)  
+- Optionally try **oversampling techniques** like SMOTE if model performance is impacted
 
 ### 🔑 Question 5:
 **What does your final cleaned dataset look like before modeling? Include shape, types of features (numerical/categorical), and a summary of the preprocessing steps applied.**  
