@@ -150,11 +150,11 @@ The results are shown below:
 
 #### 🔧 Engineered Features Analysis (Q2)
 
-To enhance model interpretability, we created the following features:
+To enhance model interpretability, I created the following features:
 - `occupation_mean_hours`: Avg. weekly hours per occupation
 - `workclass_mean_hours`: Avg. weekly hours per workclass
 
-We evaluated their usefulness via the correlation matrix below:
+I evaluated their usefulness via the correlation matrix below:
 
 📊 ![Heatmap Including Engineered Features](charts/week2_q2_heatmap_engineered_features.png)
 
@@ -165,14 +165,28 @@ We evaluated their usefulness via the correlation matrix below:
 
 ### 🔑 Question 3:
 **Which continuous features required scaling or transformation before modeling, and which method did you use?**  
-🎯 *Purpose: Connects feature scaling to model compatibility.*
 
-💡 **Hint:**  
-Use `df.describe()` and `hist()` to evaluate spread.  
-Logistic Regression is sensitive to feature scale; Random Forest is not.  
-Apply `StandardScaler` or `MinMaxScaler` accordingly.
+Several features had different value ranges or skewed distributions that required transformation or scaling for effective model training:
 
-✏️ *Your answer here...*
+#### ✅ Features Scaled Using `StandardScaler`:
+I applied standardization (zero mean, unit variance) to the following features that were roughly symmetric:
+
+- `age`
+- `education.num`
+- `hours.per.week`
+- `occupation_mean_hours`
+- `workclass_mean_hours`
+
+#### 🔁 Features Transformed Using `log1p(x)`:
+These features were highly right-skewed and contained many zero values, so we applied a log transformation before scaling:
+
+- `capital.gain`
+- `capital.loss`
+- `fnlwgt` (optional but included)
+
+This preprocessing ensures better convergence during training and reduces the impact of outliers or skewed distributions.
+
+I then applied `StandardScaler` on the transformed values to keep all continuous features on a consistent scale.
 
 ---
 
